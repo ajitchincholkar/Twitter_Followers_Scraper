@@ -11,3 +11,12 @@ I have used Selenium Webdriver for automation of the login process as well as na
 2. Add your email ID and Twitter username (one that starts with @) in the mentioned places in the code.
 3. Also, enter the Twitter username of the user whose followers you want to scrape in the mentioned places in the code.
 4. That's it, now run the code and let the scraper do it's job.
+
+Save the scraped data in csv format using the simple script
+```
+with open('filename.csv', 'w', newline='', encoding='utf-8') as f:
+    header = ['ScreenName', 'UserName','Bio']
+    writer = csv.writer(f)
+    writer.writerow(header)
+    writer.writerows(followers_list)
+```
