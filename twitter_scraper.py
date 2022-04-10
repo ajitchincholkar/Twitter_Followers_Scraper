@@ -25,11 +25,11 @@ driver.maximize_window()
 sleep(5)
 
 username = driver.find_element_by_xpath('//input[@name="text"]')
-username.send_keys('ajit24108@gmail.com')
+username.send_keys('your email id here')
 username.send_keys(Keys.RETURN)
 sleep(10)
 username1 = driver.find_element_by_xpath('//input[@name="text"]')
-username1.send_keys('test_2account')
+username1.send_keys('your username here')
 username1.send_keys(Keys.RETURN)
 my_password = getpass()
 password = driver.find_element_by_xpath('//input[@name="password"]')
@@ -39,17 +39,17 @@ sleep(5)
 
 # Find search input and search for term or user
 search_input = driver.find_element_by_xpath('//input[@aria-label="Search query"]')
-search_input.send_keys('@0x_Vinyl')
+search_input.send_keys('Username whose followers you want to scrape')
 search_input.send_keys(Keys.RETURN)
 sleep(5)
 
 driver.find_element_by_link_text('People').click()
 sleep(5)
-driver.find_element_by_link_text('@0x_Vinyl').click()
+driver.find_element_by_link_text('Username whose followers you want to scrape').click()
 sleep(5)
 
 # Opening user's followers list
-driver.find_element_by_xpath("//a[@href='/0x_Vinyl/followers']").click()
+driver.find_element_by_xpath("//a[@href='/username without @/followers']").click()
 sleep(5)
 
 # Get all followers and their bio on the page
